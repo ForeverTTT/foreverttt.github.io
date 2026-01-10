@@ -1,0 +1,20 @@
+---
+layout: default
+title : Blog
+navbar_title: Blog
+---
+
+<h1>Blog</h1>
+{% if site.posts and site.posts.size > 0 %}
+<div class="list-group">
+  {% for post in site.posts %}
+  <div class="list-group-item mb-3 shadow-sm">
+    <h4 class="mb-1"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+    <small class="text-muted">{{ post.date | date: "%Y-%m-%d" }}</small>
+    <p class="mb-1">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<p>暂无博客文章。</p>
+{% endif %}
