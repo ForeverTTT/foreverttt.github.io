@@ -4,5 +4,13 @@ title : CV
 navbar_title: CV
 ---
 
-<h1>CV</h1>
-<p>在此添加个人简历内容、下载链接或联系方式。</p>
+<script>
+  // 访问 CV 页面时自动跳转到 PDF
+  window.location.href = "{{ '/assets/cv/CV%20Linhan%20Li%20(2).pdf' | relative_url }}";
+</script>
+
+<noscript>
+  <h1>CV</h1>
+  <p><a href="{{ '/assets/cv/CV%20Linhan%20Li%20(2).pdf' | relative_url }}">点击查看或下载 PDF</a></p>
+  <p>如果未自动跳转，请手动点击上述链接。</p>
+</noscript>
